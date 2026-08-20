@@ -579,8 +579,8 @@
   <section id="finale">
     <div class="wrap">
       <div class="conferma-box visibile" data-rivela="">
-        <h2>Quale meta ti ispira di più? Scegli la tua preferita.</h2>
-        <p class="sotto">Altrimenti ci inventiamo qualcosa strada facendo.</p>
+        <h2>Quale meta ti ispira di più? Scegli la tua preferita</h2>
+        <p class="sotto">Scegli con calma, possiamo anche deciderlo all'ultimo</p>
         <form id="form-finale" method="POST" action="https://formspree.io/f/xdenyvkz">
           <div class="scelte" id="scelte"><label class="scelta"><input type="radio" name="meta_scelta" value="parma"><span>Parma</span></label><label class="scelta"><input type="radio" name="meta_scelta" value="mantova"><span>Mantova</span></label><label class="scelta"><input type="radio" name="meta_scelta" value="ferrara"><span>Ferrara</span></label><label class="scelta larga"><input type="radio" name="meta_scelta" value="rinvio"><span>Teniamo buona un'altra domenica</span></label><label class="scelta larga"><input type="radio" name="meta_scelta" value="idea"><span>Oppure hai un'altra idea?</span></label></div>
           <div class="campo" id="campo-idea">
@@ -598,7 +598,7 @@
   </section>
 </main>
 
-<footer><div class="wrap"><p class="mono">06.09.2026 · Fotografie: Wikimedia Commons</p></div></footer>
+<footer><div class="wrap"><p class="mono">Per Valentina · Da Gabriele</p></div></footer>
 
 <div class="ov" id="ov" role="dialog" aria-modal="true" aria-labelledby="mod-t">
   <div class="modale">
@@ -1138,8 +1138,7 @@ form.addEventListener("submit", function(e){
   dati.set("meta_scelta", ETICHETTE[sel.value] || sel.value);
   if(sel.value !== "idea") dati.delete("idea_personale");
 
-  /* Finché l'ID di Formspree non è stato inserito, si salta l'invio di rete. */
-  const configurato = form.action.indexOf("IL_TUO_FORM_ID") === -1;
+  const configurato = form.action.indexOf("xdenyvkz") === -1;
   function concludi(){
     esitoModale(sel.value, idea);
     form.reset();
