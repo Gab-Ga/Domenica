@@ -384,7 +384,15 @@
   .pf-fronte .sotto{padding:18px 20px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
   .pf-fronte h4{font-family:var(--serif);font-size:clamp(1.5rem,3.4vw,1.72rem);font-weight:300;color:#FBF8F2}
   .pf-fronte .tocca{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#8E9789}
-  .pf-retro{background:#1F231D;transform:rotateY(180deg);padding:22px;gap:12px;overflow:auto;-webkit-overflow-scrolling:touch}
+.pf-retro {
+  background:#1F231D;
+  padding:22px;
+  gap:12px;
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
   .pf-retro h4{font-family:var(--serif);font-size:1.5rem;font-weight:300;color:#FBF8F2;margin-bottom:16px}
   .pf-retro dl{margin:0;display:grid;gap:14px}
   .pf-retro dt{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#8E9789}
